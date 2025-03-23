@@ -4,7 +4,7 @@ import Java_Generics.WarehouseManagementSystem.warehouse_items.WarehouseItems;
 
 import java.util.ArrayList;
 
-public class Storage<T extends WarehouseItems> {
+public class Storage<T extends WarehouseItems> {  // Storage
     private final ArrayList<T>items;
 
     public Storage(){

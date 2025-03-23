@@ -3,7 +3,7 @@ package Java_Generics.WarehouseManagementSystem;
 import Java_Generics.WarehouseManagementSystem.warehouse_items.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) {  // main function
         Electronics electronics = new Electronics(1, "TV");
         Electronics electronics2 = new Electronics(2, "Remote");
         Groceries groceries = new Groceries(2, "Milk");

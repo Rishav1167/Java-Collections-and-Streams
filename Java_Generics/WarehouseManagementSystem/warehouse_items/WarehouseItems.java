@@ -1,6 +1,6 @@
 package Java_Generics.WarehouseManagementSystem.warehouse_items;
 
-public abstract class WarehouseItems {
+public abstract class WarehouseItems {   // defining all items (super class)
     private int id;
     private String name;
 
