@@ -1,6 +1,6 @@
 package Java_Generics.Online_Marketplace.product_categories;
 
-public class Books implements Catetories {
+public class Books implements Catetories {  // Implementing categories
     private String name;
 
     public Books(String name) {

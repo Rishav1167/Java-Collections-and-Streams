@@ -2,7 +2,7 @@ package Java_Generics.Online_Marketplace;
 
 import Java_Generics.Online_Marketplace.product_categories.Catetories;
 
-public class Product<T extends Catetories> {
+public class Product<T extends Catetories> {  // defining different product categories
     private String name;
     public T category;
 
