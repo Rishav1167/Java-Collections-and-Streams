@@ -23,6 +23,6 @@ public class BinaryNumbers{
     }
 
     public static void main(String[] args){
-        findBinaryNumbers(5);
+        findBinaryNumbers((int)(Math.random()*10));
     }
 }
