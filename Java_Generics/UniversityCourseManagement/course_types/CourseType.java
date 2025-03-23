@@ -2,7 +2,7 @@ package Java_Generics.UniversityCourseManagement.course_types;
 
 import Java_Generics.UniversityCourseManagement.evaluation_types.EvaluationType;
 
-public abstract class CourseType<T extends EvaluationType> {
+public abstract class CourseType<T extends EvaluationType> { // CourseType inheriting different classes implementing EvaluationType
     protected T evaluationType;
 
     public CourseType(T evaluationType) {

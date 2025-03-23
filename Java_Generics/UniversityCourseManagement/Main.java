@@ -5,7 +5,7 @@ import Java_Generics.UniversityCourseManagement.evaluation_types.*;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) {  //main function
         ExamBased examEval = new ExamBased(120);
         ExamCourse examCourseType = new ExamCourse(examEval);
         Course<ExamCourse> calculus = new Course<>("MATH101", examCourseType);

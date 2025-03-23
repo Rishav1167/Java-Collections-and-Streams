@@ -1,5 +1,5 @@
 package Java_Generics.UniversityCourseManagement.evaluation_types;
 
-public interface EvaluationType {
+public interface EvaluationType {  // interface
 
 }

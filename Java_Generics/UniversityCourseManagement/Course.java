@@ -5,7 +5,7 @@ public class Course<T>{
     private String name;
     private T courseType;
 
-    public Course(String name, T courseType) {
+    public Course(String name, T courseType) { // constructor
         this.name = name;
         this.courseType = courseType;
     }

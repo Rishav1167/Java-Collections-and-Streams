@@ -1,6 +1,6 @@
 package Java_Generics.UniversityCourseManagement.evaluation_types;
 
-public class AssignmentBased implements EvaluationType {
+public class AssignmentBased implements EvaluationType {  // implementing interface
     private int totalAssignments;
 
     public AssignmentBased(int totalAssignments) {
