@@ -14,7 +14,7 @@ public class TestDateFormater {
     }
 
     @Test
-    void testFormatDate(){
+    void testFormatDate(){  // test case
         Assertions.assertEquals("10-01-2001", dateFormatter.formatDate("2001-01-10"));
     }
 }

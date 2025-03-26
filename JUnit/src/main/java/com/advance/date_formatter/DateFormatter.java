@@ -10,7 +10,7 @@ public class DateFormatter {
         DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
-        LocalDate date = LocalDate.parse(inputDate, inputFormatter); // formating
+        LocalDate date = LocalDate.parse(inputDate, inputFormatter); // formating the date in another format
         return date.format(outputFormatter);
 
     }
