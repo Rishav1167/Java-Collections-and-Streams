@@ -1,48 +1,40 @@
 package Streams.BufferedStreams;
 
 import java.io.*;
-import java.util.LinkedList;
-import java.util.List;
-
 public class FileHandler {
-    public static List<Integer> readFile(String filePath) {
-        try (FileInputStream fis = new FileInputStream(filePath)) {
-            List<Integer> lines = new LinkedList<>();
-            int line;
-            while ((line = fis.read()) != -1){
-                lines.add(line);
-            }
-            return lines;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return null;
-    }
-
-    public static void writeFile(String filePath, List<Integer> lines) {
-        try (FileOutputStream fos = new FileOutputStream(filePath)) {
-            for (int line : lines) {
-                fos.write(line);
-            }
-            System.out.println("File written successfully");
-        } catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-    }
 
     public static void copyFileBuffered(String inputFilePath, String outputFilePath) {
+        long startTime = System.nanoTime(); // Start time measurement
         try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(inputFilePath));
              BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(outputFilePath))) {
 
-            byte[] buffer = new byte[4096];
+            byte[] buffer = new byte[4096]; // 4 KB buffer
             int bytesRead;
             while ((bytesRead = bis.read(buffer)) != -1) {
                 bos.write(buffer, 0, bytesRead);
             }
-            System.out.println("File copied successfully with buffering.");
+            bos.flush(); // Ensure all data is written
+            long endTime = System.nanoTime(); // End time measurement
+            System.out.println("Buffered Copy completed in " + (endTime - startTime) / 1_000_000 + " ms");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error copying file: " + e.getMessage());
         }
     }
 
+    // Copy file using Unbuffered Streams (For Performance Comparison)
+    public static void copyFileUnbuffered(String inputFilePath, String outputFilePath) {
+        long startTime = System.nanoTime(); // Start time measurement
+        try (FileInputStream fis = new FileInputStream(inputFilePath);
+             FileOutputStream fos = new FileOutputStream(outputFilePath)) {
+
+            int byteData;
+            while ((byteData = fis.read()) != -1) {
+                fos.write(byteData);
+            }
+            long endTime = System.nanoTime(); // End time measurement
+            System.out.println("Unbuffered Copy completed in " + (endTime - startTime) / 1_000_000 + " ms");
+        } catch (IOException e) {
+            System.out.println("Error copying file: " + e.getMessage());
+        }
+    }
 }
