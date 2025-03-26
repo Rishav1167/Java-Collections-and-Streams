@@ -10,7 +10,7 @@ public class Main {
             double interest = Interest.calculateInterest(badAmount, rate, years);
             System.out.printf("Calculated interest: %.2f%n", interest);
         } catch (IllegalArgumentException e) {
-            System.out.println("Invalid input: " + e.getMessage());
+            System.out.println("Invalid input: " + e.getMessage());  // catching exception
         }
     }
 }
