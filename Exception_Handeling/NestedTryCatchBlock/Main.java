@@ -1,7 +1,7 @@
 package Exception_Handeling.NestedTryCatchBlock;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) {  // Implemented nested Try catch
         try{
             int[] arr = {12, 53, 11, 33};
             int idx = 2;
