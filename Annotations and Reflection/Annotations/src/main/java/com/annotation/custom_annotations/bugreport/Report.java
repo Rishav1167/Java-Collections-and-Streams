@@ -7,7 +7,7 @@ public class Report {
     @BugReport(description ="ArrayIndexOutOfBoundsException in edge cases")
     public static void printBugReport(){
         try{
-            Class<?> bugs = Report.class;   // used when function is static
+            Class<?> bugs = Report.class;   //.class can be used for both static and non-static
             Method method = bugs.getMethod("printBugReport");
             BugReport[] bugReports = method.getAnnotationsByType(BugReport.class);
 
