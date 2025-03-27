@@ -3,7 +3,7 @@ package com.annotation.suppresswarnings;
 import java.util.ArrayList;
 
 public class Array {
-    @SuppressWarnings({"unchecked" , "rawtypes"})  // will suppress the warnings 
+    @SuppressWarnings({"unchecked" , "rawtypes"})  // will suppress the warnings
     public static void createArray(){
         ArrayList list=new ArrayList();
         list.add("hello");
