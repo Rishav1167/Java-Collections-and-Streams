@@ -1,6 +1,6 @@
 package com.annotation.custom_annotations.taskinfo;
 
-@TaskInfo(priority = 1, assignedTo = "Task Manager Class")
+@TaskInfo(priority = 1, assignedTo = "Task Manager ")
 public class TaskManager {
     public void getAnnotationDetails() {
         Class<?> clazz = this.getClass();  // getClass() can be used for only non-static methods
