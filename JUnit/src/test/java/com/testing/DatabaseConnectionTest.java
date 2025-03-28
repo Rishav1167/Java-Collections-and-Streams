@@ -29,6 +29,7 @@ public class DatabaseConnectionTest {
     }
 
     @AfterEach
+    @Test
     void tearDown() {
         databaseConnection.disconnect();
         assertFalse(databaseConnection.isConnected());
